@@ -68,4 +68,4 @@ Only installed-font family names are referenced. No font files, subsets or conve
 
 ## Project-owned material
 
-The DSH integration, build scripts, tests, sample content and geometric project icon are maintained in this repository. They are covered by the project LICENSE, subject to the notices above. Personal runtime screenshots, host bundles, configuration backups and extracted upstream source files are excluded from public distribution.
+The DSH integration, build scripts, tests, sample content and geometric project icon are maintained in this repository. They are covered by the project LICENSE, subject to the notices above. Public screenshots show Inkstone in the actual DSH desktop application; the application's names and interface identify the host, without implying endorsement. Private conversation contents, host bundles, configuration backups and extracted upstream source files are excluded from public distribution.

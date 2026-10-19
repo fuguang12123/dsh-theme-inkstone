@@ -15,11 +15,11 @@ Checked on 2026-10-19 against DeepSeek Harness **0.2.1-rc.2**, Windows desktop.
 - The theme was installed through the official CLI into an isolated profile and the desktop profile.
 - Installed `dist/client.js` matched the local build by SHA256.
 - Light/dark appearance, fonts, colored headings and input surfaces were checked in the real desktop client during development.
-- Version 0.1.4 sidebar selection, hover, icon inversion and pane dividers were checked in the light desktop client. Its dark navigation colors passed contrast checks; dark native navigation was not separately rechecked after that change.
+- Version 0.1.4 sidebar selection, hover, icon inversion and pane dividers were checked in the light desktop client. Both light and dark sidebar selection, headings and code blocks were subsequently checked in the real desktop client when capturing the public screenshots.
 - The interactive preview uses sample content and the same palette/CSS sources. It does not connect to a model.
 
 ## Limits
 
 Other DSH versions, every third-party plugin page and real mobile browsers have not been validated. The package declares the exact tested host version. Update this declaration only after testing another host.
 
-Public screenshots show the sample preview, rather than personal sessions or account information. Local runtime records and backups are excluded from the repository.
+Public screenshots are unmodified captures of the real Windows desktop client showing a binary-search demonstration conversation, with unrelated community plugins disabled. Other conversation bodies, account-settings pages and balance widgets are not shown. Local runtime records and backups are excluded from the repository.

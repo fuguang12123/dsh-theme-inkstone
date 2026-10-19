@@ -6,10 +6,10 @@
 
 ## 预览
 
-下图为自建的交互式主题预览，使用示例内容；实际客户端布局由 DSH 版本及其他插件决定。
+下图为 **DSH 0.2.1-rc.2 Windows 桌面端实机截图**，展示二分查找演示会话。取图时停用了其他社区插件；实际布局由 DSH 版本与已启用插件决定。
 
-![浅色主题示例](docs/images/light.png)
-![深色主题示例](docs/images/dark.png)
+![真实桌面端浅色效果](docs/images/light.jpg)
+![真实桌面端深色效果](docs/images/dark.jpg)
 
 ## 特性
 
