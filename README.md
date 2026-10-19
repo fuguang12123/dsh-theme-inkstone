@@ -1,5 +1,7 @@
 # 墨白 · Inkstone
 
+平时用 Obsidian 记笔记，觉得它的阅读和写作体验很舒服，就想把自己喜欢的这份体验也带到 DeepSeek Harness 里，于是写了「墨白」。
+
 适用于 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的独立社区主题，以黑白配色、霞鹜文楷和安静的阅读排版为主。参考 [Obsidian Minimal](https://github.com/kepano/obsidian-minimal) 的 E-ink 风格，针对 DSH 的布局和主题接口重新实现。
 
 本项目与 DeepSeek、Obsidian、Minimal 及其作者没有官方合作或背书关系。项目名称为「墨白 / Inkstone」，包名为 `dsh-theme-inkstone`。
