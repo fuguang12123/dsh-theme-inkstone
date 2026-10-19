@@ -28,6 +28,12 @@
 
 ## 安装
 
+### 插件市场（申请收录中）
+
+已向 [awesome-dsh-plugin 目录提交收录申请 #8107](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/8107)，归类为主题，并指定预构建安装包。该目录是社区市场 [dshmarket](https://github.com/dsh-market/dsh-market) 的数据来源。
+
+**目前尚未完成收录。** 等待目录审核合并并刷新后，使用该市场的用户可在「主题」中搜索 `Inkstone`、`墨白` 或 `dsh-theme-inkstone`，核对兼容的宿主版本后安装。申请期间请使用下面的 Release 安装方式。
+
 ### 推荐：预构建安装包
 
 从 [Releases](https://github.com/fuguang12123/dsh-theme-inkstone/releases) 下载 `dsh-theme-inkstone-0.1.4.tgz`。桌面版先完全退出 DSH，再运行：
