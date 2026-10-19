@@ -8,8 +8,10 @@
 
 下图为 **DSH 0.2.1-rc.2 Windows 桌面端实机截图**，展示二分查找演示会话。取图时停用了其他社区插件；实际布局由 DSH 版本与已启用插件决定。
 
-![真实桌面端浅色效果](docs/images/light.jpg)
-![真实桌面端深色效果](docs/images/dark.jpg)
+图片使用原始 PNG 文件，保留原始分辨率，未缩放或重新压缩。
+
+![真实桌面端浅色效果](docs/images/light.png)
+![真实桌面端深色效果](docs/images/dark.png)
 
 ## 特性
 
