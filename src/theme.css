@@ -1,0 +1,95 @@
+/* Attribute ownership is released with the plugin. No fixed generated hashes. */
+body[data-dsh-inkstone] {
+  -webkit-font-smoothing: antialiased;
+  --inkstone-heading-weight: 600;
+}
+
+body[data-dsh-inkstone] ::selection {
+  background: var(--inkstone-selection);
+  color: var(--inkstone-selection-text);
+}
+
+/* Minimal E-ink uses an inverted fill for both hover and selection, with
+   plain rows at rest. Stable CSS Modules local names avoid generated hashes.
+   Leave native drag/drop pseudo-elements and row geometry untouched. */
+body[data-dsh-inkstone] :is(
+  [class$='_panelRow'], [class*='_panelRow '],
+  [class$='_projectRow'], [class*='_projectRow '],
+  [class$='_sessionRow'], [class*='_sessionRow '],
+  [class$='_searchResultRow'], [class*='_searchResultRow '],
+  [class$='_newSession'], [class*='_newSession '],
+  [data-inkstone-nav-row]
+) {
+  background: transparent;
+  color: var(--inkstone-nav-ink);
+  border-radius: 4px;
+  box-shadow: none;
+  transition: none;
+}
+
+body[data-dsh-inkstone] :is(
+  [class$='_panelRow'], [class*='_panelRow '],
+  [class$='_projectRow'], [class*='_projectRow '],
+  [class$='_sessionRow'], [class*='_sessionRow '],
+  [class$='_searchResultRow'], [class*='_searchResultRow '],
+  [class$='_newSession'], [class*='_newSession '],
+  [data-inkstone-nav-row]
+):is(
+  [aria-current='page'], [aria-selected='true'],
+  [class$='_selected'], [class*='_selected '],
+  [class$='_panelActive'], [class*='_panelActive '],
+  [class$='_menuOpen'], [class*='_menuOpen '],
+  :hover, :active, :focus-visible
+) {
+  background: var(--inkstone-nav-fill);
+  color: var(--inkstone-nav-on-fill);
+  /* Timestamps, folder icons and utility buttons use their own label tokens. */
+  --dsw-alias-label-primary: var(--inkstone-nav-on-fill);
+  --dsw-alias-label-secondary: var(--inkstone-nav-on-fill);
+  --dsw-alias-label-tertiary: var(--inkstone-nav-on-fill);
+  --dsw-alias-label-caption: var(--inkstone-nav-on-fill);
+  --dsw-alias-state-business-primary: var(--inkstone-nav-on-fill);
+  --dsw-alias-interactive-bg-hover: var(--inkstone-nav-action-hover);
+  --dsw-focus-ring-color: var(--inkstone-nav-on-fill);
+}
+
+/* Keep the existing button geometry without a left/right border. */
+body[data-dsh-inkstone] :is([class$='_newSession'], [class*='_newSession '], [data-inkstone-new-session]) {
+  border-color: transparent;
+}
+
+/* In the reference, thin ink rules divide panes rather than individual rows. */
+body[data-dsh-inkstone] :is(
+  [class$='_root'], [class*='_root ']
+):has(> :is([class$='_panelList'], [class*='_panelList '])),
+body[data-dsh-inkstone] [data-inkstone-sidebar] {
+  box-shadow: inset -1px 0 0 var(--inkstone-nav-ink);
+}
+
+body[data-dsh-inkstone] :is([class$='_footArea'], [class*='_footArea ']) {
+  box-shadow: inset 0 1px 0 var(--inkstone-nav-ink);
+}
+
+/* MarkdownText.module.css exports .markdown. Match its stable local name in
+   both the Web build (hash_markdown) and Desktop build (_markdown_hash_line),
+   excluding compact tool output. This optional heading accent fails harmlessly
+   if the upstream local name changes; the token theme continues to work. */
+body[data-dsh-inkstone] :is([class^='_markdown_'], [class*=' _markdown_'], [class$='_markdown'], [class*='_markdown '], [data-inkstone-markdown]):not([class*='_compact']) h1 { color: var(--inkstone-h1); }
+body[data-dsh-inkstone] :is([class^='_markdown_'], [class*=' _markdown_'], [class$='_markdown'], [class*='_markdown '], [data-inkstone-markdown]):not([class*='_compact']) h2 { color: var(--inkstone-h2); }
+body[data-dsh-inkstone] :is([class^='_markdown_'], [class*=' _markdown_'], [class$='_markdown'], [class*='_markdown '], [data-inkstone-markdown]):not([class*='_compact']) h3 { color: var(--inkstone-h3); }
+body[data-dsh-inkstone] :is([class^='_markdown_'], [class*=' _markdown_'], [class$='_markdown'], [class*='_markdown '], [data-inkstone-markdown]):not([class*='_compact']) h4 { color: var(--inkstone-h4); }
+body[data-dsh-inkstone] :is([class^='_markdown_'], [class*=' _markdown_'], [class$='_markdown'], [class*='_markdown '], [data-inkstone-markdown]):not([class*='_compact']) h5 { color: var(--inkstone-h5); }
+body[data-dsh-inkstone] :is([class^='_markdown_'], [class*=' _markdown_'], [class$='_markdown'], [class*='_markdown '], [data-inkstone-markdown]):not([class*='_compact']) h6 { color: var(--inkstone-h6); }
+
+body[data-dsh-inkstone] :is([class^='_markdown_'], [class*=' _markdown_'], [class$='_markdown'], [class*='_markdown '], [data-inkstone-markdown]):not([class*='_compact']) a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-dsh-inkstone] {
+    --ds-transition-duration: 0s;
+    --ds-transition-duration-fast: 0s;
+    --ds-transition-duration-slow: 0s;
+  }
+}

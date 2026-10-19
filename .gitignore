@@ -1,0 +1,13 @@
+.sandbox/
+test-results/
+backups/
+node_modules/
+.env
+.env.*
+*.log
+.playwright-cli/
+output/
+screenshots/
+release/
+/PRODUCT.md
+/VALIDATION.md

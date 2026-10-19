@@ -1,0 +1,40 @@
+{
+  "name": "dsh-theme-inkstone",
+  "version": "0.1.4",
+  "private": false,
+  "description": "墨白：参考 Obsidian Minimal E-ink 与霞鹜文楷的 DeepSeek Harness 主题",
+  "type": "module",
+  "license": "MIT",
+  "author": "fuguang12123",
+  "homepage": "https://github.com/fuguang12123/dsh-theme-inkstone#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuguang12123/dsh-theme-inkstone.git"
+  },
+  "bugs": { "url": "https://github.com/fuguang12123/dsh-theme-inkstone/issues" },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./client": "./dist/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./assets/icon.svg"
+  },
+  "engines": { "node": ">=24", "dsh": "0.2.1-rc.2" },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "inject": ["@deepseek-ai/dsh-client-ui-theme"]
+    }
+  },
+  "files": ["dist", "locale", "assets/icon.svg", "cordis.patch.yml", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/theme.test.mjs",
+    "preview": "node scripts/preview.mjs",
+    "prepack": "node scripts/build.mjs",
+    "prepare": "node scripts/build.mjs"
+  },
+  "keywords": ["dsh-plugin", "dsh-theme", "deepseek-harness", "eink", "theme"]
+}
